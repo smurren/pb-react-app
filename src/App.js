@@ -36,22 +36,20 @@ class App extends Component {
 
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        
-        <div id="app-container">
-
+        <div>
           <AppBar 
             id="app-appBar" 
             title="MyApp" 
-            style={{position: 'fixed', top: 0}}
+            style={{position: "fixed", top: "0"}}
             showMenuIconButton={false}
           />
+          <div style={{height: 64}}></div>
 
-          <div id="app-body" className="appBody">
+          <div className="appBody">
             {view}
+            <div className="footer"></div>
           </div>
-
         </div>
-
       </MuiThemeProvider>
     );
   }

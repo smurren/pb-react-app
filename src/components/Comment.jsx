@@ -4,11 +4,19 @@ class Comment extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      user: props.user,
+      text: props.text
+    };
   };
 
   render() {
-  return (<li>{this.props.value}</li>);
+    return (
+      <div className="dpComment">
+        <h4 className="dpCommentHeader">{this.props.user || "anonymous"}</h4>
+        <div>{this.props.text}</div>
+      </div>
+    );
   }
 }
 

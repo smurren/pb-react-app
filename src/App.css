@@ -1,30 +1,41 @@
+body {
+  height: 100%;
+  background-color: dimgray;
+}
+
 .App {
   text-align: center;
 }
 
-.appContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.appBody {
+  min-height: 100%;
 }
 
-.appBody {
-  min-height: 333px;
-  padding-top: 64px;
-  flex: 1;
+.footer {
+  height: 50px;
 }
 
 .centerHor {
   text-align: center;
 }
 
-/* Main */
+/* ---------------- Main ---------------- */
+.uriHeader {
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
 
-/* Comments */
+/* ---------------- Comments ---------------- */
+.dpCommentsSectionContainer {
+  margin: 0 auto;
+  width: 575px;
+  padding: 5px 5px 25px 5px;
+}
+
 .dpCommentInputContainer {
-  width: 475px;
-  height: 175px;
+  width: 525px;
+  height: 200px;
   margin: 0 auto;
 }
 
@@ -38,14 +49,45 @@
 }
 
 .dpCommentsContainer {
-  margin: 0 auto;
-  width: 475px;
+  margin-top: 10px;
+}
+
+.dpCommentUserInput {
+  width: 236px;
 }
 
 .dpInputOptionContainer {
-  height: 25px;
+  display: inline;
 }
 
 .dpInputOption {
   float: right;
+  margin-right: -1px;
+  padding-bottom: 2px;
+}
+
+.dpCommentsStatus, .dpComment {
+  width: 525px;
+  margin: 0 auto;
+}
+
+.dpCommentsStatus {
+  padding-top: 20px;
+}
+
+.dpComment {
+  min-height: 50px;
+  max-height: 150px;
+  padding: 5px 0px 5px 0px;
+  overflow-y: auto;
+}
+
+.dpCommentHeader {
+  margin-bottom: 5px;
+}
+
+
+
+.noDisplay {
+  display: none;
 }

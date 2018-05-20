@@ -13,7 +13,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-          <h2>{this.state.uri}</h2>
+          <div className="uriHeader">{this.state.uri}</div>
           <Comments uri={this.state.uri}></Comments>
       </div>
     );

@@ -14,3 +14,38 @@
   padding-top: 64px;
   flex: 1;
 }
+
+.centerHor {
+  text-align: center;
+}
+
+/* Main */
+
+/* Comments */
+.dpCommentInputContainer {
+  width: 475px;
+  height: 175px;
+  margin: 0 auto;
+}
+
+.dpCommentInput {
+  resize: none;
+  width:100%;
+  box-sizing: border-box;         /* For IE and modern versions of Chrome */
+  -moz-box-sizing: border-box;    /* For Firefox                          */
+  -webkit-box-sizing: border-box; /* For Safari                           */
+  height: 150px;
+}
+
+.dpCommentsContainer {
+  margin: 0 auto;
+  width: 475px;
+}
+
+.dpInputOptionContainer {
+  height: 25px;
+}
+
+.dpInputOption {
+  float: right;
+}

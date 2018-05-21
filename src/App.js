@@ -4,7 +4,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar';
-// import FlatButton from 'material-ui/FlatButton';
 // import logo from './logo.svg';
 import './App.css';
 

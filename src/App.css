@@ -34,6 +34,7 @@ body {
 }
 
 .dpCommentInputContainer {
+  position: relative;
   width: 525px;
   height: 200px;
   margin: 0 auto;
@@ -57,18 +58,18 @@ body {
 }
 
 .dpInputOptionContainer {
-  display: inline;
+  position: absolute;
+  right: 0px;
+  bottom: -8px;
+  height: 33px;
 }
 
 .dpInputOption {
-  float: right;
-  margin-right: -1px;
-  padding-bottom: 2px;
+  
 }
 
 .dpCommentsStatus, .dpComment {
   width: 525px;
-  margin: 0 auto;
 }
 
 .dpCommentsStatus {
@@ -77,16 +78,17 @@ body {
 
 .dpComment {
   min-height: 50px;
-  max-height: 150px;
   padding: 5px 0px 5px 0px;
-  overflow-y: auto;
+  margin: 0 auto;
 }
 
 .dpCommentHeader {
   margin-bottom: 5px;
 }
 
-
+.formError {
+  border: solid 1px red;
+}
 
 .noDisplay {
   display: none;

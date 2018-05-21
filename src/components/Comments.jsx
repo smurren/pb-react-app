@@ -29,6 +29,7 @@ class Comments extends Component {
         commentsStatusMessage: "Loading...",
         user: "",
         input: "",
+        inputError: false,
         comments: [],
         commentsMessageClass: "dpCommentsStatus"
     };
@@ -65,12 +66,18 @@ class Comments extends Component {
         this.setState({commentsStatusMessage: this.state.comments.length === 0 ? "No comments" : ""});
         this.setState({commentsMessageClass: this.state.comments.length === 0 ? "dpCommentsStatus" : "noDisplay"})
 
-       }.bind(this), 1500)
+       }.bind(this), 1250)
   }
 
   handleUserEdit = (e) => { this.setState({user: e.target.value}); }
 
   handleCommentEdit = (e) => { this.setState({input: e.target.value}); }
+
+  validate = (comment) => {
+    const valid = comment.length > 0 && comment.length <= 500;
+    this.setState({inputError: !valid});
+    return valid;
+  }
 
   handleSubmit = (e) => {
     const user = this.state.user;
@@ -78,9 +85,11 @@ class Comments extends Component {
     const newId = this.state.comments.slice(-1)[0].id+1;
     const newComments = this.state.comments.slice();
 
-    newComments.push({id: newId, user: user, text: comment});
-    this.setState({comments: newComments});
-    this.setState({input: ""});
+    if (this.validate(comment)) {
+      newComments.push({id: newId, user: user, text: comment});
+      this.setState({comments: newComments});
+      this.setState({input: ""});
+    }
   }
 
   render() {
@@ -99,8 +108,10 @@ class Comments extends Component {
               multiLine={true}
               placeholder="Comment..."
               className="dpCommentInput"
+              errorText={this.state.inputError ? "Required" : ""}
               margin="normal"
               rows={4}
+              maxLength="500"
               fullWidth={true}
               value={this.state.input} 
               onChange={this.handleCommentEdit}
